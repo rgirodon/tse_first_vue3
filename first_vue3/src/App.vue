@@ -2,15 +2,18 @@
 export default {
   data() {
     return {
-      count: 0
+      message: "Hello TSE !"
     }
   }
 }
 </script>
 
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+  <p>The message : {{ message }}</p>
 </template>
 
 <style scoped>
+p {
+  font-style: italic;
+}
 </style>
