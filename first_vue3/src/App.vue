@@ -2,18 +2,23 @@
 export default {
   data() {
     return {
-      message: "Hello TSE !"
+      title: "Vue Router"
     }
   }
 }
 </script>
 
 <template>
-  <p>The message : {{ message }}</p>
+  <h1>{{ title }}</h1>
+  <nav>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </nav>
+  <router-view></router-view>
 </template>
 
 <style scoped>
-p {
-  font-style: italic;
+a + a {
+  margin-left: 10px;
 }
 </style>
