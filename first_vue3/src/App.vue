@@ -2,8 +2,11 @@
 export default {
   data() {
     return {
-      count: 0,
-      shoppingList: [{ key:1, article: 'Lessive' }, { key:2, article: 'Lait' }]
+      shoppingList: [
+        { key:1, article: 'Lessive' }, 
+        { key:2, article: 'Lait' },
+        { key:3, article: 'Chocolat' },
+        ]
     }
   }
 }
@@ -11,9 +14,8 @@ export default {
 
 <template>
   <div>
-    <button @click="count++">Count is: {{ count }}</button>
     <ul>
-      <li v-for="item in shoppingList" :key="item.id">{{ item.article }}</li>
+      <li v-for="item in shoppingList" :key="item.key">{{ item.article }}</li>
     </ul>
   </div>
 </template>
