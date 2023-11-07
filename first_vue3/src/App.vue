@@ -10,13 +10,13 @@ export default {
 
   computed : {
     reversedMessage() {
-      return this.reverseString(this.message);
+      return this.message.split("").reverse().join("");
     }    
   },
 
   methods : {
-    reverseString(str) {
-      return str.split("").reverse().join("");
+    increment() {
+      this.count++;
     }
   }
 }
@@ -24,7 +24,7 @@ export default {
 
 <template>
   <div>
-    <button @click="count++">Count is: {{ count }}</button>
+    <button @click="increment">Count is: {{ count }}</button>
     <p>{{ message }}</p>
     <p class="reversed">{{ reversedMessage }}</p>
   </div>
